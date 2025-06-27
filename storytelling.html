@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Essay Reading App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Welcome Page -->
+<div class="night fade" id="introScreen">
+  <div class="moon" id="moon"></div>
+  <button class="start-btn" id="startBtn">Let's Start</button>
+</div>
+
+<!-- Instructions -->
+<div class="popup" id="instructionPopup">
+  <button id="closeInstruction">✖</button>
+  <h3>📘 How to Use This App</h3>
+  <ul>
+    <li>Click the moon to play intro music 🎵</li>
+    <li>Press "Let's Start" to begin the story 📖</li>
+    <li>Adjust music volume 🔊 using the slider</li>
+    <li>Tap 🔊 Speak to hear the story + animation</li>
+    <li>Tap 🔈 Stop to stop voice + show full story</li>
+    <li>When reading ends, screen breaks and restarts 🔁</li>
+  </ul>
+</div>
+
+<!-- Content Page -->
+<div class="content-page fade" id="contentPage">
+  <div class="controls">
+    <div>
+      <button id="speakBtn">🔊 Play</button>
+      <button id="pauseBtn">⏸ Pause</button>
+      <button id="stopBtn">🔈 Stop</button>
+      <button id="endBtn">🔚 End</button>
+    </div>
+    <input type="range" id="musicVolume" class="volume-slider" min="0" max="1" step="0.1" value="0.5">
+  </div>
+  <div id="storyOutput" class="typing"></div>
+
+  <div class="popup" id="storyPopup">
+    <button id="closeStory">✖</button>
+    <p><strong>Title:</strong> Pulse Moon</p>
+    <p>In a drought-hit village in Tamil Nadu, two children, Aarav and Janani, grew up together amid hardship and loss. Bound by friendship and shared struggles, their lives took drastically different paths after tragedy struck—setting the stage for a haunting story of justice, revenge, and fate.
+...</p>
+  </div>
+</div>
+
+<!-- Audio -->
+<audio id="bgMusic" src="assist/relaxing-piano-melody-317065.mp3" loop></audio>
+<audio id="clickSound" src="assist/g6-82014.mp3"></audio>
+<audio id="startSound" src="assist/d6-82018.mp3"></audio>
+<audio id="moonMusic" src="assist/cymatics-dazed-vocal-loop-149-bpm-g-min-337854.mp3"></audio>
+<audio id="burstMusic" src="assist/electric-guitar-strumming-2-97680.mp3"></audio>
+
+<script src="./app.js"></script>
+</body>
+</html>
